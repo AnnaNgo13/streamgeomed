@@ -1,25 +1,25 @@
 	
 <Query>    ::= SELECT   <SelectList>
-                FROM     <FromList>
-                WHERE    <WCondition>
+				FROM     <FromList>
+				WHERE    <WCondition>
 				GROUP BY <GroupByExpressionList>
 				WINDOW   <WindowList>
 				HAVING   <HavingCondition>
 				ORDER BY <OrderByList> | 
-                SELECT   <SelectList>
-                FROM     <FromList>
-                WHERE    <WCondition>
+				SELECT   <SelectList>
+				FROM     <FromList>
+				WHERE    <WCondition>
 				GROUP BY <GroupByExpressionList>
 				WINDOW   <WindowList>
 				HAVING   <HavingCondition>   |
-                SELECT   <SelectList>
-                FROM     <FromList>
-                WHERE    <WCondition>
+				SELECT   <SelectList>
+				FROM     <FromList>
+				WHERE    <WCondition>
 				GROUP BY <GroupByExpressionList>
-				WINDOW   <WindowList>  |                 
-                SELECT   <SelectList>
-                FROM     <FromList>
-                WHERE    <WCondition>
+				WINDOW   <WindowList>  |
+				SELECT   <SelectList>
+				FROM     <FromList>
+				WHERE    <WCondition>
 				GROUP BY <GroupByExpressionList>
 				WINDOW   <WindowList>
 				ORDER BY <OrderByList>   |
@@ -29,7 +29,7 @@
 					<AggAttributeList>, <SelectList> 
                    
 <AttributeList> ::= <Attribute> | 
-                    <Attribute>, <AttributeList>
+					<Attribute>, <AttributeList>
 
 <Attribute> ::= LITERAL
 
@@ -37,10 +37,10 @@
 						<AggFunction>(<MeasurementAttribute>), <AggAttributeList>
 
 <AggFunction> ::= MIN|
-                  MAX|
-                  AVG|
-                  MEDIAN|
-                  ...
+					MAX|
+					AVG|
+					MEDIAN|
+					...
 
 <FromList>     ::= <Relation> |
 					<Relation> , <FromList>
@@ -49,23 +49,23 @@
 							<Attribute>,  <MeasurementAttribute>
 
 <WCondition>  ::=        <WCondition> AND <WCondition> |
-							(<GeoAttributeList> <Comparator> <GeoAttributeList>) |
-							(<GeoAttributeList> <Comparator> NUMERICAL) |  
-							(<Attribute> LIKE LITERAL ) |
-							(<SpatialFunctionCall> <Comparator> NUMERICAL ) |
-							<SpatialPredicateCall>, <WCondition>
+						(<GeoAttributeList> <Comparator> <GeoAttributeList>) |
+						(<GeoAttributeList> <Comparator> NUMERICAL) |
+						(<Attribute> LIKE LITERAL ) |
+						(<SpatialFunctionCall> <Comparator> NUMERICAL ) |
+						<SpatialPredicateCall>, <WCondition>
 
 
 <SpatialFunctionCall> ::= <SpatialFunction>(<GeoAttributeList>,<GeoAttributeList>) | 
-                          <SpatialFunction>(<GeoAttributeList>,GEO_OBJECT)
+							<SpatialFunction>(<GeoAttributeList>,GEO_OBJECT)
 
 <SpatialPredicateCall> ::= <SpatialPredicate>(<GeoAttributeList>,<GeoAttributeList>) | 
-                           <SpatialPredicate>(<GeoAttributeList>,GEO_OBJECT) 
+							<SpatialPredicate>(<GeoAttributeList>,GEO_OBJECT) 
 
 <SpatialPredicate> ::= ST_Contains  |
-					ST_Within    |
-					ST_Intersects|
-					...
+						ST_Within    |
+						ST_Intersects|
+						...
 
 <SpatialFunction> ::= ST_Distance |
 						...    
@@ -79,9 +79,9 @@
 				<= |
 				>= |
 
-<GroupByExpressionList>  ::=               |    
-							<Attribute>  |
-							<Attribute>, <GroupByExpressionList> 
+<GroupByExpressionList>  ::=               | 
+						<Attribute>  |
+						<Attribute>, <GroupByExpressionList> 
 
 <WindowList>   ::= <Amount> <Unit>,<Amount> <Unit> 
 
@@ -97,5 +97,5 @@
 <OrderByList>  ::=   <Attribute> <keyword> 
 
 <keyword>  ::=  ASC |
-                DESC    
+				DESC    
 						
