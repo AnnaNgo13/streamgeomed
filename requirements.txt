@@ -1,0 +1,6 @@
+pyspark
+apache-sedona
+pytest
+sqlparse
+icecream
+kafka-python

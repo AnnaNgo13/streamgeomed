@@ -1,0 +1,29 @@
+{
+    "sensor_zatu":
+    {
+        "id":"sensor_zatu",
+        "sources":[
+            "sensor_zatu"
+        ],
+        "schema":[
+            {"column":"devEUI","type":"string"},
+            {"column":"data_temperature","type":"float"},
+            {"column":"data_airHumidity","type":"float"},
+            {"column":"data_node_timestampUTC","type":"string"},
+            {"column":"geometry","type":"string"}
+        ],
+        "transformation":"SELECT devEUI, data_temperature, data_airHumidity, data_node_timestampUTC, geometry FROM sensor_zatu"
+    },
+    "land":
+    {
+        "id":"land",
+        "sources":[
+            "land"
+        ],
+        "schema":[
+            {"column":"land_id","type":"string"},
+            {"column":"geometry","type":"float"}
+        ],
+        "transformation":"SELECT land_id, geometry FROM land"
+    }
+}
