@@ -2,11 +2,22 @@
 
 ## Getting started
 
+### System Requirements
+
+* Docker and Docker Compose
+
+* Spark Cluster on 9 virtual machines: one master, and 8 workers. Each machine is equipped of 2.60GHz Intel(R) Xeon(R) CPU E5-2650 v2 with 4 CPUs, and 8GB RAM, and running Linux Ubuntu
+
+* Apache Spark 3.2.2 
+
+* Python 3.6
+
 ### Prerequisites for the project
+
 
 1. Install requirements
 ```
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt 
 ```
